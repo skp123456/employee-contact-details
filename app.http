@@ -1,0 +1,51 @@
+POST http://localhost:3000/create-employee/
+Content-Type: application/json
+
+{
+    "empId":6,
+    "empFullName":"Rakesh Sharma",
+    "jobTitle":"Data Engineer",
+    "phoneNumber":9991245216,
+    "email":"rakesh@gmail.com",
+    "address":"Ghantaghar, Gonda, Uttar Pradesh",
+    "primaryEmergencyContact":"Anil Sharma",
+    "primaryPhoneNumber":9935245216,
+    "relationship":"Father",
+    "secondaryEmergencyContact":"Akash Yadav",
+    "secondaryPhoneNumber":9935245258,
+    "secondaryRelationship":"Friend"
+}
+
+###
+
+GET http://localhost:3000/employee/?limit=2&offset=1
+
+
+###
+
+PUT http://localhost:3000/update-employee/6/
+Content-Type: application/json
+
+{
+    "empFullName":"Rakesh Singh",
+    "jobTitle":"Data Analyst",
+    "phoneNumber":9991245254,
+    "email":"rakesh@gmail.com",
+    "address":"12,Ghantaghar, Gonda, Uttar Pradesh",
+    "primaryEmergencyContact":"Anil Singh",
+    "primaryPhoneNumber":9935245254,
+    "relationship":"Father",
+    "secondaryEmergencyContact":"Ajay Yadav",
+    "secondaryPhoneNumber":9935245298,
+    "secondaryRelationship":"Friend"
+}
+
+
+###
+
+DELETE http://localhost:3000/delete-employee/6/
+
+
+###
+
+GET http://localhost:3000/employee/1/
